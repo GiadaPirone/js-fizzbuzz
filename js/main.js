@@ -1,18 +1,30 @@
 const contenitore = document.getElementById("container");
-let scriviFlizz = "Frizz";
+let scriviFizz = "Fizz";
+let scriviBuzz = "Buzz"
+let scriviFizzBuzz = " FizzBuzz"
+for ( let c = 1; c <= 100; c++){
 
-for ( let c = 0; c < 20; c++){
-
-    var indice = c + 1; //per far diventare 0=1 19=20
-
-    contenitore.innerHTML = contenitore.innerHTML + ` <div class="box">${indice}</div> `;
+    // contenitore.innerHTML = contenitore.innerHTML + ` <div class="box">${c}</div> `;
     // contenitore.innerHTML =  ` <div class="box">${c}</div> `;
        
-    if (indice % 3 == 0){
-        document.querySelector(".box").innerHTML = scriviFlizz;
-        
+    if (c % 3 == 0){
+        contenitore.innerHTML = contenitore.innerHTML + ` <div class="box">${scriviFizz}</div> `;
+    } 
+
+    if(c % 5 == 0){
+        contenitore.innerHTML = contenitore.innerHTML + ` <div class="box">${scriviBuzz}</div> `;
+    } 
+
+    if ( c % 15 == 0){
+        contenitore.innerHTML = contenitore.innerHTML + ` <div class="box">${scriviFizzBuzz}</div> `;
+    } 
+
+     else if (c % 15 != 0 && c % 5 != 0 && c % 3 != 0) {
+        contenitore.innerHTML = contenitore.innerHTML + ` <div class="box">${c}</div> `;
     }
 
+        
+    
 }
 
 
